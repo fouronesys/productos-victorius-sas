@@ -33,7 +33,7 @@ export function Navbar() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2 z-50 relative">
-            <img src={logoUrl} alt="Productos Victorius S.A.S." className="h-12 md:h-16 w-auto object-contain transition-all" />
+             <img src={logoUrl} alt="Productos Victorius S.A.S." width={384} height={459} className="h-12 md:h-16 w-auto object-contain transition-all" />
           </Link>
 
           {/* Desktop Nav */}

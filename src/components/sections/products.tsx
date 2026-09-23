@@ -9,6 +9,8 @@ export function Products() {
       title: "Paneles Solares",
       description: "Módulos fotovoltaicos de alta eficiencia para proyectos residenciales e industriales.",
       image: "paneles-transporte.webp",
+      width: 1080,
+      height: 606,
       color: "bg-blue-50 text-primary border-primary/20",
       tag: "Alta Demanda"
     },
@@ -17,6 +19,8 @@ export function Products() {
       title: "Kits Solares",
       description: "Sistemas completos (5kW, híbridos y comerciales) listos para instalación.",
       image: "kit-solar-5kw.webp",
+      width: 699,
+      height: 865,
       color: "bg-green-50 text-secondary border-secondary/20",
       tag: "Solución Integral"
     },
@@ -25,6 +29,8 @@ export function Products() {
       title: "Iluminación Solar",
       description: "Alumbrado público, luces de muro y accesorios portátiles con panel integrado.",
       image: "alumbrado-solar.webp",
+      width: 852,
+      height: 852,
       color: "bg-orange-50 text-accent border-accent/20",
       tag: "Sin Cableado"
     },
@@ -33,6 +39,8 @@ export function Products() {
       title: "Calentadores Solares",
       description: "Alternativas solares para el calentamiento de agua en diferentes espacios.",
       image: "calentador-instalado.webp",
+      width: 820,
+      height: 651,
       color: "bg-slate-50 text-slate-600 border-slate-200",
       tag: "Ahorro Térmico"
     }
@@ -65,6 +73,8 @@ export function Products() {
                 <img 
                   src={getImageUrl(category.image)} 
                   alt={category.title}
+                  width={category.width}
+                  height={category.height}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   loading="lazy"
                 />
@@ -80,7 +90,7 @@ export function Products() {
                   {category.description}
                 </p>
                 <a 
-                  href={`https://wa.me/573224038915?text=Hola, me interesa información sobre ${category.title}`}
+                  href={`https://wa.me/573224038915?text=${encodeURIComponent(`Hola, me interesa información sobre ${category.title}`)}`}
                   target="_blank"
                   rel="noreferrer"
                   className="inline-flex items-center text-sm font-semibold text-primary hover:text-primary/80 transition-colors"
@@ -98,15 +108,17 @@ export function Products() {
           <h3 className="text-2xl font-bold text-center mb-10 text-foreground">Más de nuestras soluciones</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[
-              ['luces-solares-muro.webp', 'Luminaria solar de pared'],
-              ['accesorios-iluminacion.webp', 'Accesorios de iluminación solar'],
-              ['kit-solar-hibrido.webp', 'Kit de energía solar híbrido'],
-              ['calentador-exhibicion.webp', 'Calentador solar exhibido'],
-            ].map(([img, description]) => (
-              <div key={img} className="relative aspect-square rounded-2xl overflow-hidden shadow-sm group">
+              { image: 'luces-solares-muro.webp', description: 'Luminaria solar de pared', width: 502, height: 524 },
+              { image: 'accesorios-iluminacion.webp', description: 'Accesorios de iluminación solar', width: 1080, height: 1127 },
+              { image: 'kit-solar-hibrido.webp', description: 'Kit de energía solar híbrido', width: 742, height: 799 },
+              { image: 'calentador-exhibicion.webp', description: 'Calentador solar exhibido', width: 764, height: 1400 },
+            ].map(({ image, description, width, height }) => (
+              <div key={image} className="relative aspect-square rounded-2xl overflow-hidden shadow-sm group">
                 <img 
-                  src={getImageUrl(img)} 
+                  src={getImageUrl(image)} 
                   alt={description}
+                  width={width}
+                  height={height}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   loading="lazy"
                 />

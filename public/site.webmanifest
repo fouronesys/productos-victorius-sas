@@ -1,0 +1,19 @@
+{
+  "name": "Productos Victorius S.A.S.",
+  "short_name": "Victorius",
+  "description": "Paneles, kits y productos solares en Bogotá",
+  "lang": "es-CO",
+  "start_url": "./",
+  "scope": "./",
+  "display": "browser",
+  "background_color": "#ffffff",
+  "theme_color": "#2375b6",
+  "icons": [
+    {
+      "src": "favicon.png",
+      "sizes": "256x256",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

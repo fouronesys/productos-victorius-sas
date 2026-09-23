@@ -10,7 +10,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 mb-12">
           {/* Brand Col */}
           <div className="flex flex-col gap-6">
-            <img src={logoUrl} alt="Productos Victorius S.A.S." className="h-24 w-auto self-start object-contain" />
+            <img src={logoUrl} alt="Productos Victorius S.A.S." width={384} height={459} loading="lazy" className="h-24 w-auto self-start object-contain" />
             <p className="text-muted/80 text-sm leading-relaxed max-w-xs">
               Suministro de paneles, kits y otros productos solares desde Bogotá.
             </p>

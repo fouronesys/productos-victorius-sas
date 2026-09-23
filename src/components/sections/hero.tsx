@@ -53,6 +53,8 @@ export function Hero() {
               <img 
                 src={heroImage} 
                 alt="Kit solar comercial con paneles y accesorios"
+                width={747}
+                height={902}
                 className="w-full h-full object-cover"
                 loading="eager"
               />

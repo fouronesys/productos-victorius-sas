@@ -31,6 +31,8 @@ export function About() {
             <img 
               src={panelImage} 
               alt="Inventario de paneles solares en bodega" 
+              width={1040}
+              height={1199}
               className="rounded-3xl shadow-lg w-full h-auto object-cover aspect-[4/5] md:aspect-auto"
               loading="lazy"
             />
