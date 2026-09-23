@@ -5,7 +5,7 @@ export function Hero() {
   const heroImage = `${import.meta.env.BASE_URL}images/kit-solar-comercial.webp`.replace('//', '/');
 
   return (
-    <section id="inicio" className="relative min-h-[90vh] flex items-center pt-20 overflow-hidden bg-muted/30">
+    <section id="inicio" className="relative min-h-[90vh] flex items-center pt-20 pb-12 md:pb-10 overflow-hidden bg-muted/30">
       {/* Decorative background elements */}
       <div className="absolute top-0 right-0 -translate-y-1/4 translate-x-1/4 w-[800px] h-[800px] bg-accent/10 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute bottom-0 left-0 translate-y-1/4 -translate-x-1/4 w-[600px] h-[600px] bg-primary/10 rounded-full blur-[100px] pointer-events-none" />
@@ -60,7 +60,7 @@ export function Hero() {
             </div>
             
             {/* Floating badge */}
-            <div className="absolute -bottom-6 -left-6 md:-left-12 glass p-4 rounded-2xl shadow-xl animate-in slide-in-from-bottom-8 duration-700 delay-300">
+            <div className="relative mt-4 w-fit max-w-full md:absolute md:mt-0 md:-bottom-6 md:-left-12 glass p-4 rounded-2xl shadow-xl animate-in slide-in-from-bottom-8 duration-700 delay-300">
               <div className="flex items-center gap-4">
                 <div className="bg-secondary/20 p-3 rounded-full">
                   <Sun className="h-6 w-6 text-secondary" />
