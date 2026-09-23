@@ -15,7 +15,7 @@ export function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const logoUrl = `${import.meta.env.BASE_URL}logo-victorius.png`.replace('//', '/');
+  const logoUrl = `${import.meta.env.BASE_URL}logo-symbol.png`;
 
   const navLinks = [
     { href: '#inicio', label: 'Inicio' },
@@ -32,13 +32,17 @@ export function Navbar() {
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2 z-50 relative">
-             <img src={logoUrl} alt="Productos Victorius S.A.S." width={384} height={459} className="h-12 md:h-16 w-auto object-contain transition-all" />
+          <Link href="/" className="relative z-50 flex shrink-0 items-center gap-2.5">
+            <img src={logoUrl} alt="" width={384} height={384} className="h-11 w-11 shrink-0 object-contain md:h-14 md:w-14" />
+            <span className="flex flex-col whitespace-nowrap leading-tight text-foreground">
+              <span className="text-sm font-medium tracking-tight">Productos</span>
+              <span className="text-base font-extrabold tracking-tight sm:text-lg">Victorius S.A.S.</span>
+            </span>
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-8">
-            <ul className="flex items-center gap-6">
+          <nav className="hidden md:flex items-center gap-4 lg:gap-8">
+            <ul className="flex items-center gap-3 lg:gap-6">
               {navLinks.map((link) => (
                 <li key={link.href}>
                   <a 
@@ -50,12 +54,12 @@ export function Navbar() {
                 </li>
               ))}
             </ul>
-            <div className="flex items-center gap-4 border-l pl-6 border-border">
+            <div className="flex items-center gap-2 border-l pl-3 border-border lg:gap-4 lg:pl-6">
               <a href="tel:+573224038915" className="flex items-center gap-2 text-sm font-medium hover:text-primary transition-colors">
                 <Phone className="h-4 w-4 text-primary" />
                 <span className="hidden lg:inline">322 403 8915</span>
               </a>
-              <Button asChild size="sm" className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-6">
+              <Button asChild size="sm" className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-4 lg:px-6">
                 <a href="https://wa.me/573224038915" target="_blank" rel="noreferrer">
                   Cotizar ahora
                 </a>
