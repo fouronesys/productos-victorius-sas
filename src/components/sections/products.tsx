@@ -43,6 +43,16 @@ export function Products() {
       height: 651,
       color: "bg-slate-50 text-slate-600 border-slate-200",
       tag: "Ahorro Térmico"
+    },
+    {
+      id: "redes-electricas",
+      title: "Redes Eléctricas",
+      description: "Opciones para redes eléctricas y distribución de energía. Consulte los componentes disponibles para su proyecto.",
+      image: "redes-electricas.webp",
+      width: 1200,
+      height: 800,
+      color: "bg-blue-50 text-primary border-primary/20",
+      tag: "Distribución"
     }
   ];
 
@@ -55,7 +65,7 @@ export function Products() {
           <div className="max-w-2xl">
             <p className="text-sm font-bold tracking-wider text-secondary uppercase mb-3">Nuestro catálogo</p>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground text-balance">
-              Paneles, kits y productos solares
+              Soluciones solares y redes eléctricas
             </h2>
           </div>
           <Button asChild variant="outline" className="rounded-full bg-white">
@@ -66,7 +76,7 @@ export function Products() {
           </Button>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
           {categories.map((category) => (
             <Card key={category.id} className="group overflow-hidden border-border/50 hover:border-primary/30 transition-all hover:shadow-lg bg-white">
               <div className="relative h-48 overflow-hidden bg-muted">
@@ -101,6 +111,47 @@ export function Products() {
               </CardContent>
             </Card>
           ))}
+        </div>
+
+        <div className="mt-16 rounded-3xl border border-border/50 bg-white p-6 shadow-sm md:p-10">
+          <div className="mb-8 max-w-3xl">
+            <p className="mb-3 text-sm font-bold uppercase tracking-wider text-primary">Infraestructura eléctrica</p>
+            <h3 id="redes-electricas-title" className="mb-3 text-2xl font-bold text-foreground md:text-3xl">
+              Redes eléctricas y distribución de energía
+            </h3>
+            <p className="leading-relaxed text-muted-foreground">
+              Conozca opciones relacionadas con redes de distribución, canalización e infraestructura eléctrica.
+              Escríbanos para consultar los componentes disponibles y las necesidades de su proyecto.
+            </p>
+          </div>
+          <div className="grid gap-5 sm:grid-cols-2">
+            {[
+              { image: 'redes-electricas.webp', alt: 'Red aérea de distribución eléctrica con transformadores', label: 'Redes de distribución', width: 1200, height: 800 },
+              { image: 'canalizacion-electrica.webp', alt: 'Canalización y conexiones para infraestructura eléctrica', label: 'Canalización eléctrica', width: 1070, height: 1080 },
+            ].map((photo) => (
+              <figure key={photo.image} className="overflow-hidden rounded-2xl bg-muted">
+                <img
+                  src={getImageUrl(photo.image)}
+                  alt={photo.alt}
+                  width={photo.width}
+                  height={photo.height}
+                  loading="lazy"
+                  className="h-56 w-full object-cover md:h-72"
+                />
+                <figcaption className="px-4 py-3 text-sm text-muted-foreground">
+                  {photo.label} · Fotografía de referencia
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+          <a
+            href={`https://wa.me/573224038915?text=${encodeURIComponent('Hola, quisiera información sobre redes eléctricas')}`}
+            target="_blank"
+            rel="noreferrer"
+            className="mt-8 inline-flex items-center font-semibold text-primary hover:text-primary/80"
+          >
+            Consultar sobre redes eléctricas <ArrowRight className="ml-2 h-4 w-4" />
+          </a>
         </div>
 
         {/* Highlighted Gallery */}

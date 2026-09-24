@@ -1,6 +1,6 @@
 # Productos Victorius S.A.S.
 
-Sitio corporativo independiente para el portafolio de productos solares de Productos Victorius S.A.S. El logo y las fotografías proceden del material facilitado para el sitio. No incluye pasarela de pagos ni backend.
+Sitio corporativo independiente para el portafolio de productos solares y opciones para redes eléctricas de Productos Victorius S.A.S. El logo y las fotografías originales proceden del material facilitado para el sitio; la fotografía de la red de distribución es ilustrativa y su fuente figura en `PHOTO-CREDITS.md`. No incluye pasarela de pagos ni backend.
 
 ## Desarrollo
 

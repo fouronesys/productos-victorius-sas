@@ -35,7 +35,7 @@ const seoTags = `
     <meta property="og:image" content="${escapeHtml(imageUrl)}" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Productos Victorius S.A.S. — paneles, kits y soluciones solares" />
+    <meta property="og:image:alt" content="Productos Victorius S.A.S. — soluciones solares y redes eléctricas" />
     <meta name="twitter:image" content="${escapeHtml(imageUrl)}" />
     <script type="application/ld+json">${JSON.stringify({
       '@context': 'https://schema.org',

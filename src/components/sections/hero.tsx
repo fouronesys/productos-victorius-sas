@@ -24,8 +24,8 @@ export function Hero() {
             </h1>
             
             <p className="text-lg text-muted-foreground leading-relaxed max-w-xl text-balance">
-              Suministramos paneles, kits, iluminación y calentadores solares.
-              Explore opciones para proyectos residenciales y comerciales.
+              Suministramos paneles, kits, iluminación y calentadores solares, además de opciones
+              para redes eléctricas. Explore soluciones para proyectos residenciales y comerciales.
             </p>
             
             <div className="flex flex-wrap items-center gap-4 pt-4">
