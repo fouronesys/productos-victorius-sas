@@ -29,6 +29,31 @@ export function CallToAction() {
             </Button>
           </div>
         </div>
+        <div className="max-w-5xl mx-auto mt-8 rounded-3xl border border-primary/15 bg-blue-50/70 p-8 md:p-10">
+          <div className="flex flex-col gap-7 md:flex-row md:items-center md:justify-between">
+            <div className="max-w-xl">
+              <p className="text-xs font-bold uppercase tracking-[0.18em] text-primary mb-3">Opciones de financiación</p>
+              <h2 className="text-2xl md:text-3xl font-bold text-foreground">Consulte por Addi y Sistecrédito</h2>
+              <p className="mt-3 text-muted-foreground leading-relaxed">Pregunte por las opciones de financiación al cotizar. La disponibilidad y aprobación están sujetas a las condiciones de cada entidad.</p>
+              <a
+                href={`https://wa.me/573224038915?text=${encodeURIComponent('Hola, quisiera consultar opciones de financiación con Addi o Sistecrédito para una solución solar.')}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex mt-5 font-semibold text-primary hover:underline"
+              >
+                Consultar opciones por WhatsApp
+              </a>
+            </div>
+            <div className="flex flex-wrap gap-3" aria-label="Entidades de financiación">
+              <div className="w-44 h-24 p-5 rounded-2xl bg-white shadow-sm flex items-center justify-center">
+                <img src={`${import.meta.env.BASE_URL}images/addi-logo.png`} alt="Addi" loading="lazy" className="w-full max-h-14 object-contain" />
+              </div>
+              <div className="w-44 h-24 p-4 rounded-2xl bg-white shadow-sm flex items-center justify-center">
+                <img src={`${import.meta.env.BASE_URL}images/sistecredito-logo.png`} alt="Sistecrédito" loading="lazy" className="w-full max-h-14 object-contain" />
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

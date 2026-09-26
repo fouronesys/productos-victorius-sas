@@ -139,7 +139,7 @@ export function Products() {
                   className="h-56 w-full object-cover md:h-72"
                 />
                 <figcaption className="px-4 py-3 text-sm text-muted-foreground">
-                  {photo.label} · Fotografía de referencia
+                  {photo.label}
                 </figcaption>
               </figure>
             ))}
